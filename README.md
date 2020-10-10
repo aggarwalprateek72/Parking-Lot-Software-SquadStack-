@@ -1,4 +1,4 @@
-Parking Lot Software
+<h1>Parking Lot Software</h1>
 
 <h2>Problem Statement</h2>
 We own a parking lot that can hold up to ‘n’ cars at any given point in time. Each slot is given a number starting at one increasing with increasing distance from the entry point in steps of one. We want to create an automated ticketing system that allows our customers to use our parking lot without human intervention.
@@ -15,3 +15,15 @@ Due to government regulation, the system should provide us with the ability to f
 
 We interact with the system via a file-based input system, i.e. it should accept a filename as an input. The file referenced by filename will contain a set of commands separated by a newline, we need to execute the commands in order and produce output.
 
+<h3>Prerequisites</h3>
+
+- C++ Compiler (Preferably MinGW)
+- Text Editor (Atom/Brackets)
+
+<h3>Installing</h3>
+
+1. Head to www.mingw.org and click the “Download/Installer” link to download the MinGW setup file, or 
+- https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/ for Windows, 
+- http://www.mingw.org/wiki/LinuxCrossMinGW for Linux
+- https://brewinstall.org/Install-mingw-w64-on-Mac-with-Brew/ for Mac
+2. After downloading, install MinGW and wait for the “MinGW Installation Manager” to show up.
