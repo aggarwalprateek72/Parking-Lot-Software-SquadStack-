@@ -71,10 +71,28 @@ At the end of this project, we should be able to:
 3. Open Command Prompt (in Windows) or Terminal (in Linux/Mac) and move to the project directory.
 
 
-4. Compile the program using <mark> g++ -o program main.cpp </mark>
+4. Compile the program using
+
+        - Windows:
+                 g++ -o program main.cpp 
+                
+        -Linux/Ubuntu:
+                 g++ main.cpp 
+                
+        -MacOs:
+                 make main
 
 
-5. Run the program using <mark> g++ -o program main.cpp&program.exe </mark>
+5. Run the program using 
+
+        -Windows:
+                 g++ -o program main.cpp&program.exe 
+                
+        -Linux:
+                 ./a.out 
+                
+        -MacOs:
+                 ./main 
 
 <h3> Project Structure </h3>
 
@@ -102,50 +120,50 @@ At the end of this project, we should be able to:
         
 - File Handling methods like ifstream and ofstream to read file given in input and write to a new/overwrite to existing file.
  
--Main Function to take the query type and calling the necessary functions and class
+- Main Function to take the query type and calling the necessary functions and class
  
 
 <h3> Sample Input </h3>
 
-<mark> Create_parking_lot 6
+    Create_parking_lot 6 
 
-Park KA-01-HH-1234 driver_age 21
+    Park KA-01-HH-1234 driver_age 21 
 
-Park PB-01-HH-1234 driver_age 21
+    Park PB-01-HH-1234 driver_age 21
 
-Slot_numbers_for_driver_of_age 21
+    Slot_numbers_for_driver_of_age 21
 
-Park PB-01-TG-2341 driver_age 40
+    Park PB-01-TG-2341 driver_age 40
 
-Slot_number_for_car_with_number PB-01-HH-1234
+    Slot_number_for_car_with_number PB-01-HH-1234
 
-Leave 2
+    Leave 2
 
-Park HR-29-TG-3098 driver_age 39
+    Park HR-29-TG-3098 driver_age 39
 
-Vehicle_registration_number_for_driver_of_age 18</mark>
+    Vehicle_registration_number_for_driver_of_age 18
 
 <h3> Sample Output </h3>
 
-<mark> Created parking of 6 slots
+    Created parking of 6 slots
 
-Car with vehicle registration number KA-01-HH-1234 has been parked at slot number 1
+    Car with vehicle registration number KA-01-HH-1234 has been parked at slot number 1
 
-Car with vehicle registration number PB-01-HH-1234 has been parked at slot number 2
+    Car with vehicle registration number PB-01-HH-1234 has been parked at slot number 2
 
-1,2
+    1,2
 
-Car with vehicle registration number PB-01-TG-2341 has been parked at slot number 3
+    Car with vehicle registration number PB-01-TG-2341 has been parked at slot number 3
 
-2
+    2
 
-Slot number 2 vacated, the car with vehicle registration number PB-01-HH-1234 left the space, the driver of the car was of age 21
+    Slot number 2 vacated, the car with vehicle registration number PB-01-HH-1234 left the space, the driver of the car was of age 21
 
-Invalid Command
+    Invalid Command
 
-Car with vehicle registration number HR-29-TG-3098 has been parked at slot number 2
+    Car with vehicle registration number HR-29-TG-3098 has been parked at slot number 2
 
-No Registration Numbers for Given age has been parked. </mark>
+    No Registration Numbers for Given age has been parked. 
 
 <h2> Assumptions </h2>
 
@@ -168,3 +186,5 @@ No Registration Numbers for Given age has been parked. </mark>
 9. After adding output to the new file, it will print "Results have been added to the output file named output.txt" on the screen.
 
 10. For all the other cases/values, it will print "Invalid Option" on the screen.
+
+
