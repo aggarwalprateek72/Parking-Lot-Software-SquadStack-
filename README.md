@@ -63,7 +63,7 @@ At the end of this project, we should be able to:
 <h3> Instructions </h3>
 1. Git clone the project into desired folder in your computer using 
 
-    <mark> git clone https://github.com/aggarwalprateek72/Parking-Lot-Software-SquadStack-</mark>
+        git clone https://github.com/aggarwalprateek72/Parking-Lot-Software-SquadStack-.git
 
 
 2. Add a new text file for input by name of your choice in the folder with main.cpp.
