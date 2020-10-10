@@ -61,10 +61,110 @@ At the end of this project, we should be able to:
 - utilize heap, hash map, find, erase, data structures in C++
 
 <h3> Instructions </h3>
-1. Git clone the project into desired folder in your computer using git clone https://github.com/aggarwalprateek72/Parking-Lot-Software-SquadStack-
+1. Git clone the project into desired folder in your computer using 
+
+    <mark> git clone https://github.com/aggarwalprateek72/Parking-Lot-Software-SquadStack-</mark>
+
+
 2. Add a new text file for input by name of your choice in the folder with main.cpp.
-3. Compile the program using <mark> g++ -o program main.cpp </mark>
-4. Run the program using <mark> g++ -o program main.cpp&program.exe </mark>
+
+3. Open Command Prompt (in Windows) or Terminal (in Linux/Mac) and move to the project directory.
+
+
+4. Compile the program using <mark> g++ -o program main.cpp </mark>
+
+
+5. Run the program using <mark> g++ -o program main.cpp&program.exe </mark>
 
 <h3> Project Structure </h3>
 
+- Parking Class to contain all the necessary Functions and Data Structures
+
+    - Methods:
+    
+        1. register_new_vehicle() to register new user to the parking lot and assign closest slot to the entrance, which if full, would return empty string
+        
+        2. fetch_all_slots_for_age() Method to return all the slot numbers of cars for a given age, which if invalid would return empty vector(null)
+        
+        3. fetch_slot_number_for_reg_no() Method to return the parking slot for a given registration number, which if invalid would return -1
+        
+        4. fetch_all_reg_no_for_age() Method to return all the registration numbers of cars for a given age, which if invalid would return empty vector(null)
+        
+        5. user_leaving_parking() Method to empty the parking slot when the user leaves for given slot, and clearing all its stored value, if invalid, returns empty message
+    
+    - Data Structures:
+    
+        1. Priority Queue or Min-heap to store all the free slots in increasing order
+        
+        2. unordered_map<> to handle keys and values in order to fetch for specific age, slot, or registration number in Logarithmic time
+        
+        3. vector<> to store dynamic values from the query
+        
+- File Handling methods like ifstream and ofstream to read file given in input and write to a new/overwrite to existing file.
+ 
+-Main Function to take the query type and calling the necessary functions and class
+ 
+
+<h3> Sample Input </h3>
+
+<mark> Create_parking_lot 6
+
+Park KA-01-HH-1234 driver_age 21
+
+Park PB-01-HH-1234 driver_age 21
+
+Slot_numbers_for_driver_of_age 21
+
+Park PB-01-TG-2341 driver_age 40
+
+Slot_number_for_car_with_number PB-01-HH-1234
+
+Leave 2
+
+Park HR-29-TG-3098 driver_age 39
+
+Vehicle_registration_number_for_driver_of_age 18</mark>
+
+<h3> Sample Output </h3>
+
+<mark> Created parking of 6 slots
+
+Car with vehicle registration number KA-01-HH-1234 has been parked at slot number 1
+
+Car with vehicle registration number PB-01-HH-1234 has been parked at slot number 2
+
+1,2
+
+Car with vehicle registration number PB-01-TG-2341 has been parked at slot number 3
+
+2
+
+Slot number 2 vacated, the car with vehicle registration number PB-01-HH-1234 left the space, the driver of the car was of age 21
+
+Invalid Command
+
+Car with vehicle registration number HR-29-TG-3098 has been parked at slot number 2
+
+No Registration Numbers for Given age has been parked. </mark>
+
+<h2> Assumptions </h2>
+
+1. If the file name entered is invalid (file not present in the directory), it will print "Invalid File Name. Check for Case Sensitive" on the screen.
+
+2. File name can be given with .txt extension or without .txt extension, the program will automatically consider both of the names in same way.
+
+3. If there is no empty slot while a new user asks for ticket, it will add "No Empty Parking Space" to the output file.
+
+4. For fetching slot numbers issued to given age, if there is no such value, it will add "NULL" to the output file.
+
+5. For fetching slot numbers with given registration Numbers, if there is no such value, it will add "No such Car is Present" to the output file.
+
+6. For user leaving the parking slot, if the slot number is already empty (i.e no car is parked on the queried slot number, it will add "No Car is Present at Slot Number "+ {slot number passed} to the output file.
+
+7. For Fetch all registration numbers for given age, if their is no such values, it will add "No Registration Numbers for Given age has been parked." to the output file.
+
+8. If the command doesn't match any of the given formats (in Problem Description), it will be considered invalid & will print "Invalid Command" on the screen.
+
+9. After adding output to the new file, it will print "Results have been added to the output file named output.txt" on the screen.
+
+10. For all the other cases/values, it will print "Invalid Option" on the screen.
